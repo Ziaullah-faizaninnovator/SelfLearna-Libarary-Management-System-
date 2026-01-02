@@ -1,0 +1,71 @@
+:root {
+    --gold: #ffcc00;
+    --gold-dark: #e6b800;
+    --bg-dark: #0f172a;
+    --bg-card: #1e293b;
+    --text-white: #f8fafc;
+    --text-dim: #94a3b8;
+    --border: #334155;
+    --transition: 0.3s ease;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { background: var(--bg-dark); color: var(--text-white); font-family: 'Inter', sans-serif; line-height: 1.6; }
+.container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+
+/* Navbar */
+header { background: #000; border-bottom: 1px solid var(--border); padding: 1rem 0; position: sticky; top: 0; z-index: 1000; }
+.navbar { display: flex; justify-content: space-between; align-items: center; }
+.brand { display: flex; align-items: center; gap: 10px; color: var(--gold); }
+.brand span { color: white; }
+.nav-actions { display: flex; gap: 20px; align-items: center; }
+select { background: #000; color: white; border: 1px solid var(--border); padding: 5px; border-radius: 4px; }
+
+/* Why Section */
+.why-reading { padding: 80px 0; }
+.why-grid { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 50px; align-items: center; }
+.tag { background: var(--gold); color: #000; font-weight: bold; padding: 4px 12px; border-radius: 20px; font-size: 12px; text-transform: uppercase; }
+.why-content h2 { font-size: 2.8rem; margin: 15px 0; line-height: 1.2; }
+.stats-row { display: flex; gap: 30px; margin-top: 30px; }
+.stat-card h3 { color: var(--gold); font-size: 2rem; }
+.why-visual img { width: 100%; border-radius: 20px; box-shadow: 0 20px 40px rgba(0,0,0,0.4); }
+
+/* Search Bar */
+.search-section { transform: translateY(-30px); }
+.search-box { background: var(--bg-card); display: flex; padding: 10px; border-radius: 50px; border: 1px solid var(--border); box-shadow: 0 10px 25px rgba(0,0,0,0.3); }
+.search-box input { flex: 1; background: none; border: none; color: white; padding: 0 20px; font-size: 16px; outline: none; }
+.search-btn { background: var(--gold); border: none; padding: 12px 30px; border-radius: 30px; cursor: pointer; font-weight: bold; transition: var(--transition); }
+.search-btn:hover { background: var(--gold-dark); transform: scale(1.05); }
+
+/* Book Grid */
+.library-section { padding-bottom: 80px; }
+.section-header { text-align: center; margin-bottom: 40px; }
+.divider { height: 4px; width: 60px; background: var(--gold); margin: 10px auto; }
+.book-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 30px; }
+.book-card { background: var(--bg-card); border-radius: 16px; overflow: hidden; border: 1px solid var(--border); transition: var(--transition); height: 100%; display: flex; flex-direction: column; }
+.book-card:hover { border-color: var(--gold); transform: translateY(-8px); }
+.book-img { height: 180px; width: 100%; object-fit: cover; }
+.book-info { padding: 25px; flex: 1; display: flex; flex-direction: column; }
+.book-info h4 { margin-bottom: 10px; font-size: 1.2rem; }
+.book-info p { color: var(--text-dim); font-size: 0.9rem; margin-bottom: 20px; }
+.read-btn { display: block; background: transparent; border: 1px solid var(--gold); color: var(--gold); text-align: center; padding: 10px; border-radius: 8px; text-decoration: none; margin-top: auto; transition: var(--transition); }
+.read-btn:hover { background: var(--gold); color: #000; }
+
+/* Footer */
+footer { background: #000; padding: 60px 0 20px; border-top: 1px solid var(--border); }
+.footer-top { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px; margin-bottom: 40px; }
+.footer-col h4 { margin-bottom: 20px; color: var(--gold); }
+.footer-col ul { list-style: none; }
+.footer-col li { margin-bottom: 10px; }
+.footer-col a { color: var(--text-dim); text-decoration: none; transition: var(--transition); }
+.footer-col a:hover { color: var(--gold); padding-left: 5px; }
+.social-links { display: flex; gap: 15px; margin-top: 20px; }
+.social-links a { color: white; font-size: 1.2rem; }
+.footer-bottom { text-align: center; padding-top: 20px; border-top: 1px solid var(--border); color: var(--text-dim); font-size: 0.8rem; }
+
+/* Responsive */
+@media (max-width: 992px) {
+    .why-grid, .footer-top { grid-template-columns: 1fr; }
+    .why-visual { order: -1; }
+    .why-content h2 { font-size: 2rem; }
+}

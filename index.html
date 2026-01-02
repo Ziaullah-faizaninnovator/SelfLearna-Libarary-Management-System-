@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SelfLearna | The Open CS Library</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <nav class="navbar container">
+        <div class="brand">
+            <i class="fas fa-terminal logo-icon"></i>
+            <h1>Self<span>Learna</span></h1>
+        </div>
+        <div class="nav-actions">
+            <div class="lang-selector">
+                <i class="fas fa-globe"></i>
+                <select id="languageSelect">
+                    <option value="en">English</option>
+                    <option value="ur">Urdu</option>
+                </select>
+            </div>
+            <button class="btn-login">Sign In</button>
+        </div>
+    </nav>
+</header>
+
+<main>
+    <section class="why-reading container">
+        <div class="why-grid">
+            <div class="why-content">
+                <span class="tag">Deep Work</span>
+                <h2>Why Master CS Through Books?</h2>
+                <p>Tutorials teach you syntax; books teach you <strong>architecture</strong>. Reading allows you to internalize first principles that remain constant even as frameworks change.</p>
+            </div>
+            <div class="why-visual">
+                <div class="img-wrapper">
+                    <img src="https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?auto=format&fit=crop&w=800&q=80" alt="Study Space">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="search-section">
+        <div class="search-container container">
+            <div class="search-box">
+                <select id="searchType">
+                    <option value="title">Search Title</option>
+                    <option value="author">Search Author</option>
+                </select>
+                <input type="text" id="searchInput" placeholder="Find a classic resource...">
+                <button class="search-btn"><i class="fas fa-search"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <section class="library-section container">
+        <div class="section-header">
+            <h3>The Curriculum</h3>
+            <div class="divider"></div>
+        </div>
+        <div id="bookGrid" class="book-grid">
+            </div>
+    </section>
+</main>
+
+<footer>
+    <div class="footer-top container">
+        <div class="footer-col brand-col">
+            <h3>SelfLearna</h3>
+            <p>Empowering self-taught engineers through high-quality, open-access academic literature.</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-discord"></i></a>
+            </div>
+        </div>
+        <div class="footer-col">
+            <h4>Explore</h4>
+            <ul>
+                <li><a href="#">Algorithms</a></li>
+                <li><a href="#">System Design</a></li>
+                <li><a href="#">Cyber Security</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>Resources</h4>
+            <ul>
+                <li><a href="#">Contribute</a></li>
+                <li><a href="#">API Access</a></li>
+                <li><a href="#">Community</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>Contact</h4>
+            <p><i class="fas fa-envelope"></i> admin@selflearna.org</p>
+            <p><i class="fas fa-map-marker-alt"></i> Global Open Source Hub</p>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2026 SelfLearna Library Project. Code for the people.</p>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
